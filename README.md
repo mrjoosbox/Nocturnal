@@ -1,3 +1,3 @@
 ## Nocturnal
 site for the fastest team in idaho
-<img src="nocturnal logo T W.png" alt="logo">
+<img src="image_2025-10-20_233830313.png" alt="logo">
