@@ -11,40 +11,27 @@
         body {
             background: linear-gradient(to right, #000000, #999999);
             color: white;
-            font-family: Arial, sans-serif;
             text-align: center;
+            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
+            padding-top: 20px;
         }
 
-        .welcome {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 50px 20px 30px 20px;
-        }
-
-        .welcome h1 {
+        h1 {
             font-size: 5em;
             margin-bottom: 20px;
         }
 
         .logo {
-            height: 400px;
+            height: 700px;
             width: auto;
             margin-bottom: 20px;
         }
 
         .welcome p {
             font-size: 1.5em;
-            margin: 0;
-        }
-
-        .ex {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 0 20px;
+            margin-top: 0;
+            margin-bottom: 30px;
         }
 
         .score {
@@ -54,35 +41,15 @@
             padding: 15px 30px;
             font-size: 1.5em;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 0px;
             margin-bottom: 20px;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-
-        .score:hover {
-            background-color: #ddd;
-            transform: scale(1.05);
         }
 
         .ex p {
             font-size: 1.2em;
             line-height: 1.6;
-        }
-
-        @media (max-width: 768px) {
-            .welcome h1 {
-                font-size: 3em;
-            }
-            .logo {
-                height: 250px;
-            }
-            .welcome p, .ex p {
-                font-size: 1em;
-            }
-            .score {
-                font-size: 1.2em;
-                padding: 12px 25px;
-            }
+            max-width: 800px;
+            margin: 20px auto;
         }
     </style>
 </head>
