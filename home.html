@@ -16,7 +16,7 @@
         <p><b>speed lives after dark</b></p>
     </div>
     <div class="ex">
-        <button class="score" onclick="window.location.href='score.html'">[SCORE-BOARD]</button>
+        <button class="score" data-href="score.html">[SCORE-BOARD]</button>
         <p>
             <b><i>Nocturnal is a group of drivers dedicated to skill, speed, and most importantly, precision on the road.</i></b>
             <br><br>
@@ -31,30 +31,20 @@
     <script>
     document.addEventListener('DOMContentLoaded', () => {
 
-        const navButtons = document.querySelectorAll('button');
+        const navButtons = document.querySelectorAll('button[data-href]');
 
         navButtons.forEach(btn => {
-            const onclickAttr = btn.getAttribute('onclick');
-            const match = onclickAttr?.match(/window\.location\.href=['"](.+?)['"]/);
-            if (match) {
-
-                btn.removeAttribute('onclick');
-
-                btn.addEventListener('click', e => {
-                    e.preventDefault();
-                    document.body.classList.add('fade-out');
-                    setTimeout(() => {
-                        window.location.href = match[1];
-                    }, 800);
-                });
-            }
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                const href = btn.getAttribute('data-href');
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = href;
+                }, 800);
+            });
         });
 
     });
     </script>
 </body>
 </html>
-
-
-
-
