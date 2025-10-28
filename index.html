@@ -14,32 +14,27 @@
         <img class="logo" src="nocturnal logo T W.png" alt="NOCTURNAL Logo">
         <button class="open" data-href="home.html">[OPEN]</button>
     </div>
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
+<script>
+document.addEventListener('DOMContentLoaded', () => {
 
-        const navButtons = document.querySelectorAll('button');
+    const navButtons = document.querySelectorAll('button[data-href]');
 
-        navButtons.forEach(btn => {
-            const onclickAttr = btn.getAttribute('onclick');
-            const match = onclickAttr?.match(/window\.location\.href=['"](.+?)['"]/);
-            if (match) {
-
-                btn.removeAttribute('onclick');
-
-                btn.addEventListener('click', e => {
-                    e.preventDefault();
-                    document.body.classList.add('fade-out');
-                    setTimeout(() => {
-                        window.location.href = match[1];
-                    }, 800);
-                });
-            }
+    navButtons.forEach(btn => {
+        btn.addEventListener('click', e => {
+            e.preventDefault();
+            const href = btn.getAttribute('data-href');
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = href;
+            }, 800); // matches fadeOutUp duration
         });
-
     });
-    </script>
+
+});
+</script>
 </body>
 </html>
+
 
 
 
