@@ -14,5 +14,11 @@
         <img class="logo" src="nocturnal logo T W.png" alt="NOCTURNAL Logo">
         <button class="open" onclick="window.location.href='home.html'">[OPEN]</button>
     </div>
+    <script>
+        window.addEventListener('beforeunload', () => {
+          document.body.classList.add('fade-out');
+        });
+    </script>
 </body>
 </html>
+
