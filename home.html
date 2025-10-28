@@ -1,142 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NOCTURNAL - Home</title>
-  <link rel="icon" href="1Favicon.png" type="image/png">
-  <style>
-    body {
-      background: linear-gradient(to right, #000000, #999999);
-      color: white;
-      text-align: center;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      min-height: 100vh;
-    }
-
-    h1 {
-      font-size: 5rem;
-      margin-top: 80px;
-      margin-bottom: 20px;
-    }
-
-    .logo {
-      width: 70%;
-      max-width: 800px;
-      height: auto;
-      margin: 0;
-    }
-
-    .welcome p {
-      font-size: 1.5rem;
-      margin: 10px 0 60px 0;
-    }
-
-    .score {
-      background-color: white;
-      color: black;
-      border: none;
-      padding: 18px 45px;
-      font-size: 1.5rem;
-      cursor: pointer;
-      border-radius: 0;
-      transition: 0.2s ease;
-      margin-bottom: 50px;
-    }
-
-    .score:hover {
-      background-color: #ddd;
-    }
-
-    .desc {
-      max-width: 800px;
-      text-align: center;
-      line-height: 1.6;
-      font-size: 1.1rem;
-      padding: 0 1rem 60px 1rem;
-    }
-
-    @media (max-width: 1024px) {
-      h1 {
-        font-size: 4rem;
-        margin-top: 60px;
-      }
-      .logo {
-        width: 80%;
-        max-width: 600px;
-      }
-      .score {
-        font-size: 1.2rem;
-        padding: 14px 35px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 3rem;
-        margin-top: 50px;
-      }
-      .logo {
-        width: 85%;
-        max-width: 450px;
-      }
-      .welcome p {
-        font-size: 1.1rem;
-        margin-bottom: 40px;
-      }
-      .score {
-        font-size: 1.1rem;
-        padding: 12px 30px;
-      }
-      .desc {
-        font-size: 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 2.2rem;
-        margin-top: 40px;
-      }
-      .logo {
-        width: 90%;
-        max-width: 320px;
-      }
-      .welcome p {
-        font-size: 1rem;
-        margin-bottom: 30px;
-      }
-      .score {
-        font-size: 1rem;
-        padding: 10px 25px;
-      }
-      .desc {
-        font-size: 0.9rem;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOCTURNAL - Home</title>
+    <link rel="icon" href="1Favicon.png" type="image/png">
+    <link rel="shortcut icon" href="1Favicon.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="welcome">
-    <h1>Welcome to</h1>
-    <img class="logo" src="nocturnal logo T W.png" alt="NOCTURNAL Logo">
-    <p><b>speed lives after dark</b></p>
-  </div>
-
-  <button class="score" onclick="window.location.href='score.html'">[SCORE-BOARD]</button>
-
-  <div class="desc">
-    <p><b><i>Nocturnal</i></b> is a group of drivers dedicated to skill, speed, and most importantly, precision on the road.<br><br>
-    Based in Idaho, our goal is to push the limits of the law, as well as our builds.<br><br>
-    Everyone on this street team has the same goal — <b>to be the best.</b><br><br>
-    <b>Why “Nocturnal”?</b><br>
-    Because we live for the night, we live to make the dots of light look like beams of adrenaline.</p>
-  </div>
+    <div class="welcome">
+        <h1>Welcome to </h1>
+        <img class="logo" src="nocturnal logo T W.png" alt="NOCTURNAL Logo">
+        <p><b>speed lives after dark</b></p>
+    </div>
+    <div class="ex">
+        <button class="score" onclick="window.location.href='score.html'">[SCORE-BOARD]</button>
+        <p>
+            <b><i>Nocturnal is a group of drivers dedicated to skill, speed, and most importantly, precision on the road.</i></b>
+            <br><br>
+            Based in Idaho, our goal is to push the limits of the law, as well as our builds.
+            <br><br>
+            Everyone on this street team has the same goal.
+            <br><b>To Be The Best</b>
+            <br><br>
+            <b>Why "Nocturnal"?</b> Because we live for the night, we live to make the dots of light look like beams of adrenaline.
+        </p>
+    </div>
 </body>
 </html>
