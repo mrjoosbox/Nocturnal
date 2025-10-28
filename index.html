@@ -14,29 +14,33 @@
         <img class="logo" src="nocturnal logo T W.png" alt="NOCTURNAL Logo">
         <button class="open" onclick="window.location.href='home.html'">[OPEN]</button>
     </div>
-<script>
-document.addEventListener('DOMContentLoaded', () => {
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
 
-    const navButtons = document.querySelectorAll('button');
+        const navButtons = document.querySelectorAll('button');
 
-    navButtons.forEach(btn => {
-        const onclickAttr = btn.getAttribute('onclick');
-        const match = onclickAttr?.match(/window\.location\.href=['"](.+?)['"]/);
-        if (match) {
-            btn.addEventListener('click', e => {
-                e.preventDefault();
-                document.body.classList.add('fade-out');
-                setTimeout(() => {
-                    window.location.href = match[1];
-                }, 800);
-            });
-        }
+        navButtons.forEach(btn => {
+            const onclickAttr = btn.getAttribute('onclick');
+            const match = onclickAttr?.match(/window\.location\.href=['"](.+?)['"]/);
+            if (match) {
+
+                btn.removeAttribute('onclick');
+
+                btn.addEventListener('click', e => {
+                    e.preventDefault();
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => {
+                        window.location.href = match[1];
+                    }, 800);
+                });
+            }
+        });
+
     });
-
-});
-</script>
+    </script>
 </body>
 </html>
+
 
 
 
