@@ -26,31 +26,29 @@
         <button class="course" onclick="window.location.href='home.html'">[5]</button>
         <button class="course" onclick="window.location.href='home.html'">[6]</button>
     </div>
-    <script>
-    const links = document.querySelectorAll('a');
+<script>
+document.addEventListener('DOMContentLoaded', () => {
 
-    links.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const href = this.href;
-            document.body.classList.add('fade-out');
+    const navButtons = document.querySelectorAll('button');
 
-            setTimeout(() => {
-                window.location.href = href;
-            }, 800);
-        });
+    navButtons.forEach(btn => {
+        const onclickAttr = btn.getAttribute('onclick');
+        const match = onclickAttr?.match(/window\.location\.href=['"](.+?)['"]/);
+        if (match) {
+            btn.addEventListener('click', e => {
+                e.preventDefault();
+                document.body.classList.add('fade-out');
+                setTimeout(() => {
+                    window.location.href = match[1];
+                }, 800);
+            });
+        }
     });
 
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.body.classList.add('fade-out');
-            setTimeout(() => form.submit(), 800);
-        });
-    });
-    </script>
+});
+</script>
 </body>
 </html>
+
 
 
