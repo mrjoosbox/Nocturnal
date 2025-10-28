@@ -26,5 +26,11 @@
         <button class="course" onclick="window.location.href='home.html'">[5]</button>
         <button class="course" onclick="window.location.href='home.html'">[6]</button>
     </div>
+    <script>
+        window.addEventListener('beforeunload', () => {
+          document.body.classList.add('fade-out');
+        });
+    </script>
 </body>
 </html>
+
