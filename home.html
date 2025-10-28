@@ -28,5 +28,11 @@
             <b>Why "Nocturnal"?</b> Because we live for the night, we live to make the dots of light look like beams of adrenaline.
         </p>
     </div>
+    <script>
+        window.addEventListener('beforeunload', () => {
+          document.body.classList.add('fade-out');
+        });
+    </script>
 </body>
 </html>
+
