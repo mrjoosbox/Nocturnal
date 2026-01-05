@@ -1,0 +1,56 @@
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: "Nimbus Mono PS", "Courier New", monospace;
+    flex-direction: column;
+    align-items: center; /* centers on X axis */
+    /* removed justify-content: center to avoid vertical centering */
+    text-align: center;
+}
+h1 {
+    color: #ffffff;
+}
+
+p {
+    font-size: 16px;
+}
+
+a, a:visited {
+    color: #FFFFFF;
+    outline: white solid 1px;
+    text-decoration: underline;
+    padding-top: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.middle {
+    outline: white solid 1px;
+    padding: 50px;
+}
+
+.side {
+    width:50%
+}
+
+.teamtable {
+    width: 100%;
+    border: solid white 1px;
+}
+
+.teamtable th, .teamtable td {
+    border: solid white 1px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.teamtable td h2 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.timetable {
+    width: 100%;
+    border: solid white 1px;
+}
